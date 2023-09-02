@@ -1,0 +1,244 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+header{
+  height:100vh;
+  background-color: #0000;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('https://media.istockphoto.com/id/956062278/photo/travelers-communicating-in-hostel-bedroom.jpg?s=612x612&w=0&k=20&c=5FuKhfenaZtPDrRWBOHbYIvYvcP2VMFFks5OOkJ4vRA=');
+  background-size:cover;
+  background-position: center;
+}
+
+li {
+  list-style:none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  color:white;
+  font-size: 1rem;
+}
+
+.navbar{
+  width:98%;
+  height:60px;
+  max-width: 1200px;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+	width:200px;
+  }
+
+.navbar .links {
+  display:flex;
+  gap:2rem;
+}
+
+.navbar .links li a:after {
+  content:'';
+  position:absolute;
+  left: 0;
+  bottom:-6px;
+  height:1px;
+  width:0%;
+  transition: all ease 0.6s;
+  background-color: greenyellow;
+}
+
+.navbar .links li a:hover:after {
+  width:100%;
+} 
+
+.navbar .toggle-button {
+  color:#fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+section#hero {
+  height:calc(100vh - 60px);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color:#fff;
+}
+
+section#hero h1 {
+  font-size: 3rem;
+  margin-bottom:1rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right:2rem;
+  top:60px;
+  width: 300px;
+  height: 0;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition:height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+.dropdown-menu.open {
+  height: 170px;
+}
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:992px) {
+  .navbar .links{
+    display: none;
+  }
+  .navbar .toggle-button{
+    display:block;
+  }
+  .dropdown-menu {
+    display:block;
+  }
+}
+
+@media (max-width:576px) {
+  .dropdown-menu {
+    left: 2rem;
+    width:unset;
+  }
+}
+
+
+
+/* .container1{
+    position: relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:100vw;
+    height:500px;
+    padding:50px;
+    background-color: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+.item{
+    width:200px;
+    height:300px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow:  0 30px 50px #505050;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+    left:0;
+    top:0;
+    transform: translate(0,0);
+    border-radius: 0;
+    width:100%;
+    height:100%;
+    box-shadow: none;
+}
+.item:nth-child(3){
+    left:50%;
+}
+.item:nth-child(4){
+    left:calc(50% + 220px);
+}
+.item:nth-child(5){
+    left:calc(50% + 440px);
+}
+.item:nth-child(n+6){
+    left:calc(50% + 660px);
+    opacity: 0;
+}
+.item .content{
+    position: absolute;
+    top:50%;
+    left:100px;
+    width:300px;
+    text-align: left;
+    padding:0;
+    color:#eee;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+}
+.item:nth-child(2) .content{
+    display: block;
+    z-index: 11111;
+}
+.item .name{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 1 forwards
+}
+.item .des{
+    margin:20px 0;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards
+}
+.item button{
+    padding:10px 20px;
+    border:none;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.6s 1 forwards
+}
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+    }
+}
+.buttons{
+    position: absolute;
+    bottom:30px;
+    z-index: 222222;
+    text-align: center;
+    width:100%;
+}
+.buttons button{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid #555;
+    transition: 0.5s;
+}.buttons button:hover{
+    background-color: #bac383;
+} */
+
+
+  /*======================================================
+							Navbar
+	======================================================*/
